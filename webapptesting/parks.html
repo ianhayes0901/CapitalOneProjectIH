@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel = "stylesheet" type="text/css" href="style2.css">
+</head>
+<nav>
+    <p>Parks & Activities</p>
+    <ul>
+        <li><a href ="home.html">Home</a></li>
+        <li><a href ="webcams.html">Webcam Viewing</a></li>
+    </ul>
+</nav>
+<body>
+    <div class="row">
+        <div class="column">
+      <ul>
+        <li>Activities starting with A-F </li>
+        <ul>
+            <li> <a> Arts and Culture</a></li>
+            <li> <a> Astronomy</a></li>
+            <li> <a> Auto and ATV</a></li>
+            <li> <a> Biking</a></li>
+            <li> <a> Boating</a></li>
+            <li> <a> Camping</a></li>
+            <li> <a> Canyoneering</a></li>
+            <li> <a> Caving</a></li>
+            <li> <a> Climbing</a></li>
+            <li> <a> Compass and GPS</a></li>
+            <li> <a> Dog Sledding</a></li>
+            <li> <a> Fishing</a></li>
+            <li> <a> Flying</a></li>
+            <li> <a> Food</a></li>
+        </ul>
+        </div>
+    <div class="column">
+        <li>Activities starting with G-P </li>
+        <ul>
+            <li> <a> Golfing</a></li>
+            <li> <a> Guided Tours</a></li>
+            <li> <a> Hands-On</a></li>
+            <li> <a> Hiking</a></li>
+            <li> <a> Horse Trekking</a></li>
+            <li> <a> Hunting and Gathering</a></li>
+            <li> <a> Ice Skating</a></li>
+            <li> <a> Junior Ranger Program</a></li>
+            <li> <a> Living History</a></li>
+            <li> <a> Musuem Exhibits</a></li>
+            <li> <a> Paddling</a></li>
+            <li> <a> Park Film</a></li>
+            <li> <a> Playground</a></li>
+        </ul>
+    </div>
+    <div class="column">
+    <li>Activities starting with S-W </li>
+        <ul>
+        <li> <a> SCUBA Diving</a></li>
+        <li> <a> Shopping</a></li>
+        <li> <a> Skiing</a></li>
+        <li> <a> Snorkeling</a></li>
+        <li> <a> Snow Play</a></li>
+        <li> <a> Snowmobiling</a></li>
+        <li> <a> Snowshoeing</a></li>
+        <li> <a> Surfing</a></li>
+        <li> <a> Swimming</a></li>
+        <li> <a> Team Sports</a></li>
+        <li> <a> Tubing</a></li>
+        <li> <a> Water Skiing</a></li>
+        <li> <a> Wildwife Watching</a></li>
+        </ul>
+       </div>
+      </ul>
+    </div>
+
+    </br></br></br>
+    
+    <p> Activity: <input id = "activity" value = "Activity"> 
+        <button id ="submit">Submit</button>
+    </p>
+
+    <pre id="log"></pre>
+
+    <script src="activityoutput.js" type="text/javascript"></script> 
+
+    <script>
+
+    const api_url = 'https://developer.nps.gov/api/v1/activities?limit=100&api_key=WSAdqFUtu59kwua9z41Qs7cuVbKpruMf7eXb3kPD'
+    async function getData(){
+        const response = await fetch(api_url);
+        const data = await response.json();
+}
+
+        
+    }
+
+    getData();
+    
+    
+    
+    </script>
+    
+
+</body>
+</html>
